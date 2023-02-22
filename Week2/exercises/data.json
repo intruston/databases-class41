@@ -1,0 +1,445 @@
+{
+    "authors": [
+        {
+            "author_name": "Marie Curie",
+            "university": "Sorbonne University",
+            "date_of_birth": "1867-11-07",
+            "h_index": 10,
+            "gender": "female"
+        },
+        {
+            "author_name": "Albert Einstein",
+            "university": "University of Zurich",
+            "date_of_birth": "1879-03-14",
+            "h_index": 20,
+            "gender": "male"
+        },
+        {
+            "author_name": "Dorothy Crowfoot Hodgkin",
+            "university": "University of Oxford",
+            "date_of_birth": "1910-05-12",
+            "h_index": 30,
+            "gender": "female"
+        },
+        {
+            "author_name": "Linus Pauling",
+            "university": "California Institute of Technology",
+            "date_of_birth": "1901-02-28",
+            "h_index": 40,
+            "gender": "male"
+        },
+        {
+            "author_name": "Frederic Passy",
+            "university": "College de France",
+            "date_of_birth": "1822-05-20",
+            "h_index": 50,
+            "gender": "other"
+        },
+        {
+            "author_name": "John Bardeen",
+            "university": "University of Illinois",
+            "date_of_birth": "1908-05-23",
+            "h_index": 60,
+            "gender": "male"
+        },
+        {
+            "author_name": "John van Neumann",
+            "university": "Princeton University",
+            "date_of_birth": "1903-12-28",
+            "h_index": 70,
+            "gender": "male"
+        },
+        {
+            "author_name": "Max Born",
+            "university": "University of Gottingen",
+            "date_of_birth": "1882-12-11",
+            "h_index": 80,
+            "gender": "male"
+        },
+        {
+            "author_name": "Erwin Schrodinger",
+            "university": "University of Vienna",
+            "date_of_birth": "1887-08-12",
+            "h_index": 90,
+            "gender": "male"
+        },
+        {
+            "author_name": "Richard Feynman",
+            "university": "California Institute of Technology",
+            "date_of_birth": "1918-05-11",
+            "h_index": 85,
+            "gender": "male"
+        },
+        {
+            "author_name": "Paul Dirac",
+            "university": "University of Bristol",
+            "date_of_birth": "1902-08-08",
+            "h_index": 75,
+            "gender": "male"
+        },
+        {
+            "author_name": "Subrahmanyan Chandrasekhar",
+            "university": "University of Cambridge",
+            "date_of_birth": "1910-10-19",
+            "h_index": 65,
+            "gender": "male"
+        },
+        {
+            "author_name": "Emilio Segre",
+            "university": "University of Rome La Sapienza",
+            "date_of_birth": "1905-08-24",
+            "h_index": 55,
+            "gender": "other"
+        },
+        {
+            "author_name": "James Peebles",
+            "university": "Princeton University",
+            "date_of_birth": "1935-04-25",
+            "h_index": 45,
+            "gender": "male"
+        },
+        {
+            "author_name": "Maria Goeppert Mayer",
+            "university": "University of Gottingen",
+            "date_of_birth": "1906-06-28",
+            "h_index": 35,
+            "gender": "female"
+        }
+    ],
+    "research_papers": [
+        {
+            "paper_title": "Radioactivity",
+            "conference": "Academy of Sciences",
+            "publish_date": "1903-01-01"
+        },
+        {
+            "paper_title": "Theory of General Relativity",
+            "conference": "Physical Society of Berlin",
+            "publish_date": "1915-01-01"
+        },
+        {
+            "paper_title": "Structure of penicillin",
+            "conference": "Royal Society of Chemistry",
+            "publish_date": "1945-01-01"
+        },
+        {
+            "paper_title": "The Nature of the Chemical Bond",
+            "conference": "National Academy of Sciences",
+            "publish_date": "1939-01-01"
+        },
+        {
+            "paper_title": "International Peace",
+            "conference": "Academy of Moral and Political Sciences",
+            "publish_date": "1875-01-01"
+        },
+        {
+            "paper_title": "Transistor theory",
+            "conference": "Institute of Electrical and Electronics Engineers",
+            "publish_date": "1948-01-01"
+        },
+        {
+            "paper_title": "Mathematical foundations of quantum mechanics",
+            "conference": "Society of Natural Scientists",
+            "publish_date": "1925-01-01"
+        },
+        {
+            "paper_title": "The statistical interpretation of quantum mechanics",
+            "conference": "Royal Society of Edinburgh",
+            "publish_date": "1926-01-01"
+        },
+        {
+            "paper_title": "The Feynman Lectures on Physics",
+            "conference": "Addison-Wesley",
+            "publish_date": "1963-01-01"
+        },
+        {
+            "paper_title": "Relativistic wave equations",
+            "conference": "Royal Society",
+            "publish_date": "1928-01-01"
+        },
+        {
+            "paper_title": "Chandrasekhar limit",
+            "conference": "Astrophysical Journal",
+            "publish_date": "1931-01-01"
+        },
+        {
+            "paper_title": "Equations of motion in general relativity",
+            "conference": "Annals of Mathematics",
+            "publish_date": "1915-01-01"
+        },
+        {
+            "paper_title": "Particle accelerators",
+            "conference": "Journal of Applied Physics",
+            "publish_date": "1952-01-01"
+        },
+        {
+            "paper_title": "Early Universe",
+            "conference": "Astrophysical Journal",
+            "publish_date": "1977-01-01"
+        },
+        {
+            "paper_title": "Theories of nucleon-nucleon interaction",
+            "conference": "Nuclear Physics",
+            "publish_date": "1954-01-01"
+        },
+        {
+            "paper_title": "Wave Mechanics",
+            "conference": "Physical Review",
+            "publish_date": "1925-01-01"
+        },
+        {
+            "paper_title": "The Origin of Chemical Elements",
+            "conference": "Physical Review",
+            "publish_date": "1957-01-01"
+        },
+        {
+            "paper_title": "Theory of Stellar Evolution",
+            "conference": "Monthly Notices of the Royal Astronomical Society",
+            "publish_date": "1939-01-01"
+        },
+        {
+            "paper_title": "A Mathematical Theory of Communication",
+            "conference": "The Bell System Technical Journal",
+            "publish_date": "1948-07-01"
+        },
+        {
+            "paper_title": "Computing Machinery and Intelligence",
+            "conference": "Mind",
+            "publish_date": "1950-10-01"
+        },
+        {
+            "paper_title": "Programming a Computer for Playing Chess",
+            "conference": "Philosophical Magazine",
+            "publish_date": "1950-10-01"
+        },
+        {
+            "paper_title": "The Chemical Basis of Morphogenesis",
+            "conference": "Philosophical Transactions of the Royal Society B",
+            "publish_date": "1952-08-14"
+        },
+        {
+            "paper_title": "The Structure of Scientific Revolutions",
+            "conference": "University of Chicago Press",
+            "publish_date": "1962-10-15"
+        },
+        {
+            "paper_title": "Toward a Theory of Instruction",
+            "conference": "Harvard University Press",
+            "publish_date": "1968-01-01"
+        },
+        {
+            "paper_title": "Small Worlds: The Dynamics of Networks between Order and Randomness",
+            "conference": "Princeton University Press",
+            "publish_date": "1999-10-11"
+        },
+        {
+            "paper_title": "A Few Useful Things to Know About Machine Learning",
+            "conference": "Communications of the ACM",
+            "publish_date": "2012-12-01"
+        },
+        {
+            "paper_title": "Playing Atari with Deep Reinforcement Learning",
+            "conference": "NIPS Deep Learning Workshop",
+            "publish_date": "2013-12-01"
+        },
+        {
+            "paper_title": "Human-level control through deep reinforcement learning",
+            "conference": "Nature",
+            "publish_date": "2015-02-26"
+        },
+        {
+            "paper_title": "Mastering the game of Go with deep neural networks and tree search",
+            "conference": "Nature",
+            "publish_date": "2016-01-28"
+        },
+        {
+            "paper_title": "Deep Residual Learning for Image Recognition",
+            "conference": "CVPR",
+            "publish_date": "2016-06-01"
+        }
+    ],
+    "author_paper": [
+        {
+            "author_id": 1,
+            "paper_id": 1
+        },
+        {
+            "author_id": 2,
+            "paper_id": 2
+        },
+        {
+            "author_id": 3,
+            "paper_id": 3
+        },
+        {
+            "author_id": 4,
+            "paper_id": 4
+        },
+        {
+            "author_id": 5,
+            "paper_id": 5
+        },
+        {
+            "author_id": 6,
+            "paper_id": 6
+        },
+        {
+            "author_id": 7,
+            "paper_id": 7
+        },
+        {
+            "author_id": 8,
+            "paper_id": 8
+        },
+        {
+            "author_id": 9,
+            "paper_id": 9
+        },
+        {
+            "author_id": 10,
+            "paper_id": 10
+        },
+        {
+            "author_id": 11,
+            "paper_id": 11
+        },
+        {
+            "author_id": 12,
+            "paper_id": 12
+        },
+        {
+            "author_id": 13,
+            "paper_id": 13
+        },
+        {
+            "author_id": 14,
+            "paper_id": 14
+        },
+        {
+            "author_id": 15,
+            "paper_id": 15
+        },
+        {
+            "author_id": 1,
+            "paper_id": 16
+        },
+        {
+            "author_id": 2,
+            "paper_id": 17
+        },
+        {
+            "author_id": 3,
+            "paper_id": 18
+        },
+        {
+            "author_id": 4,
+            "paper_id": 19
+        },
+        {
+            "author_id": 5,
+            "paper_id": 20
+        },
+        {
+            "author_id": 6,
+            "paper_id": 21
+        },
+        {
+            "author_id": 7,
+            "paper_id": 22
+        },
+        {
+            "author_id": 8,
+            "paper_id": 23
+        },
+        {
+            "author_id": 9,
+            "paper_id": 24
+        },
+        {
+            "author_id": 10,
+            "paper_id": 25
+        },
+        {
+            "author_id": 11,
+            "paper_id": 26
+        },
+        {
+            "author_id": 12,
+            "paper_id": 27
+        },
+        {
+            "author_id": 13,
+            "paper_id": 28
+        },
+        {
+            "author_id": 14,
+            "paper_id": 29
+        },
+        {
+            "author_id": 15,
+            "paper_id": 30
+        }
+    ],
+    "authorMentors": [
+        {
+            "author_id": 1,
+            "mentor_id": 15
+        },
+        {
+            "author_id": 2,
+            "mentor_id": 14
+        },
+        {
+            "author_id": 3,
+            "mentor_id": 13
+        },
+        {
+            "author_id": 4,
+            "mentor_id": 12
+        },
+        {
+            "author_id": 5,
+            "mentor_id": 11
+        },
+        {
+            "author_id": 6,
+            "mentor_id": 10
+        },
+        {
+            "author_id": 7,
+            "mentor_id": 9
+        },
+        {
+            "author_id": 8,
+            "mentor_id": 1
+        },
+        {
+            "author_id": 9,
+            "mentor_id": 7
+        },
+        {
+            "author_id": 10,
+            "mentor_id": 6
+        },
+        {
+            "author_id": 11,
+            "mentor_id": 5
+        },
+        {
+            "author_id": 12,
+            "mentor_id": 4
+        },
+        {
+            "author_id": 13,
+            "mentor_id": 3
+        },
+        {
+            "author_id": 14,
+            "mentor_id": 2
+        },
+        {
+            "author_id": 15,
+            "mentor_id": 8
+        }
+    ]
+}

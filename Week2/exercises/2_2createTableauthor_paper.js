@@ -11,18 +11,17 @@ connection.connect((err) => {
     if (err) throw err;
     console.log("Connected to the database");});
 
-const sql = `ALTER TABLE authors ADD mentor INT`;
+const sql = `CREATE TABLE author_paper (
+  author_id INT,
+  paper_id INT,
+  PRIMARY KEY (author_id, paper_id),
+  FOREIGN KEY (author_id) REFERENCES authors(author_id),
+  FOREIGN KEY (paper_id) REFERENCES research_papers(paper_id)
+  )`;
 
 connection.query(sql, function (error, results) {
   if (error) throw error;
-  console.log('Add mentor');
-});
-
-const sql2 = `ALTER TABLE authors ADD FOREIGN KEY (mentor) REFERENCES authors(author_id);`;
-
-connection.query(sql2, function (error, results) {
-  if (error) throw error;
-  console.log('Add foreign key');
+  console.log('Table created successfully!');
 }); 
 
 connection.end((err) => {
