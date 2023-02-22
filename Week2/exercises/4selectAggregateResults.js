@@ -1,16 +1,7 @@
 const mysql = require("mysql");
+const { config, startConnection, endConnection } = require('./connection.js');
 
-const connection = mysql.createConnection({
-  host: "localhost",
-  user: "hyfuser",
-  password: "hyfpassword",
-  database: "userdb",
-});
-
-connection.connect((err) => {
-  if (err) throw err;
-  console.log("Connected to the database");
-});
+startConnection();
 
 // All research papers and the number of authors that wrote that paper.
 const getPapersAndAuthorsCount = () => {
@@ -19,7 +10,7 @@ const getPapersAndAuthorsCount = () => {
   LEFT JOIN author_paper ON research_papers.paper_id = author_paper.paper_id 
   GROUP BY research_papers.paper_id
   `;
-  connection.query(sql, function (error, results, fields) {
+  config.query(sql, function (error, results, fields) {
     if (error) throw error;
     console.log("All research papers and the number of authors:");
     results.forEach((result) => {
@@ -36,7 +27,7 @@ const getFemaleAuthorsPaperSum = () => {
   JOIN authors ON author_paper.author_id = authors.author_id
   WHERE authors.gender = 'Female'
   `;
-  connection.query(sql, function (error, results, fields) {
+  config.query(sql, function (error, results, fields) {
     if (error) throw error;
     console.log(
       "Sum of the research papers published by all female authors:",
@@ -51,7 +42,7 @@ const getAverageHIndexPerUniversity = () => {
   FROM authors 
   GROUP BY authors.university
   `;
-  connection.query(sql, function (error, results, fields) {
+  config.query(sql, function (error, results, fields) {
     if (error) throw error;
     console.log("Average of the h-index per university:");
     results.forEach((result) => {
@@ -67,7 +58,7 @@ const getResearchPaperSumPerUniversity = () => {
   LEFT JOIN author_paper ON authors.author_id = author_paper.author_id 
   GROUP BY authors.university
   `;
-  connection.query(sql, function (error, results, fields) {
+  config.query(sql, function (error, results, fields) {
     if (error) throw error;
     console.log("Sum of the research papers of the authors per university:");
     results.forEach((result) => {
@@ -81,7 +72,7 @@ const getMinMaxHIndexPerUniversity = () => {
   const sql = `SELECT authors.university, MIN(authors.h_index) as min_h_index, MAX(authors.h_index) as max_h_index 
   FROM authors 
   GROUP BY authors.university`;
-  connection.query(sql, function (error, results, fields) {
+  config.query(sql, function (error, results, fields) {
     if (error) throw error;
     console.log(
       "Minimum and maximum of the h-index of all authors per university:"
@@ -101,7 +92,4 @@ getAverageHIndexPerUniversity();
 getResearchPaperSumPerUniversity();
 getMinMaxHIndexPerUniversity();
 
-connection.end((err) => {
-  if (err) throw err;
-  console.log("Connection closed");
-});
+endConnection();

@@ -1,16 +1,7 @@
 const mysql = require("mysql");
+const { config, startConnection, endConnection } = require('./connection.js');
 
-const connection = mysql.createConnection({
-  host: "localhost",
-  user: "hyfuser",
-  password: "hyfpassword",
-  database: "userdb",
-});
-
-connection.connect((err) => {
-  if (err) throw err;
-  console.log("Connected to the database");
-});
+startConnection();
 
 // Write a query that prints names of all authors and their corresponding mentors.
 const printAuthorsAndMentors = () => {
@@ -20,7 +11,7 @@ const printAuthorsAndMentors = () => {
         LEFT JOIN authors as mentor ON authors.mentor = mentor.author_id;
         `;
 
-  connection.query(sql, function (error, results, fields) {
+  config.query(sql, function (error, results, fields) {
     if (error) throw error;
     console.log("Authors and their mentors:");
     results.forEach((result) => {
@@ -38,7 +29,7 @@ const printAuthorsAndPapers = () => {
     LEFT JOIN research_papers ON author_paper.paper_id = research_papers.paper_id;
   `;
 
-  connection.query(sql, function (error, results, fields) {
+  config.query(sql, function (error, results, fields) {
     if (error) throw error;
     console.log("Authors and their published papers:");
     results.forEach((result) => {
@@ -55,7 +46,4 @@ const printAuthorsAndPapers = () => {
 printAuthorsAndMentors();
 printAuthorsAndPapers();
 
-connection.end((err) => {
-  if (err) throw err;
-  console.log("Connection closed");
-});
+endConnection();
