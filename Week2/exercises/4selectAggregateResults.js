@@ -1,5 +1,4 @@
-const mysql = require("mysql");
-const { config, startConnection, endConnection } = require('./connection.js');
+const { startConnection, selectQuery, endConnection } = require('./connection.js');
 
 startConnection();
 
@@ -10,8 +9,7 @@ const getPapersAndAuthorsCount = () => {
   LEFT JOIN author_paper ON research_papers.paper_id = author_paper.paper_id 
   GROUP BY research_papers.paper_id
   `;
-  config.query(sql, function (error, results, fields) {
-    if (error) throw error;
+  selectQuery(sql, (results) => {
     console.log("All research papers and the number of authors:");
     results.forEach((result) => {
       console.log(`${result.paper_title} - : ${result.authors_count}`);
@@ -27,8 +25,7 @@ const getFemaleAuthorsPaperSum = () => {
   JOIN authors ON author_paper.author_id = authors.author_id
   WHERE authors.gender = 'Female'
   `;
-  config.query(sql, function (error, results, fields) {
-    if (error) throw error;
+  selectQuery(sql, (results) => {
     console.log(
       "Sum of the research papers published by all female authors:",
       results[0].paper_sum
@@ -42,8 +39,7 @@ const getAverageHIndexPerUniversity = () => {
   FROM authors 
   GROUP BY authors.university
   `;
-  config.query(sql, function (error, results, fields) {
-    if (error) throw error;
+  selectQuery(sql, (results) => {
     console.log("Average of the h-index per university:");
     results.forEach((result) => {
       console.log(`${result.university} - ${result.avg_h_index}`);
@@ -58,8 +54,7 @@ const getResearchPaperSumPerUniversity = () => {
   LEFT JOIN author_paper ON authors.author_id = author_paper.author_id 
   GROUP BY authors.university
   `;
-  config.query(sql, function (error, results, fields) {
-    if (error) throw error;
+  selectQuery(sql, (results) => {
     console.log("Sum of the research papers of the authors per university:");
     results.forEach((result) => {
       console.log(`${result.university} - ${result.paper_sum}`);
@@ -72,11 +67,8 @@ const getMinMaxHIndexPerUniversity = () => {
   const sql = `SELECT authors.university, MIN(authors.h_index) as min_h_index, MAX(authors.h_index) as max_h_index 
   FROM authors 
   GROUP BY authors.university`;
-  config.query(sql, function (error, results, fields) {
-    if (error) throw error;
-    console.log(
-      "Minimum and maximum of the h-index of all authors per university:"
-    );
+  selectQuery(sql, (results) => {
+    console.log("Minimum and maximum of the h-index of all authors per university:");
     results.forEach((result) => {
       console.log(
         `${result.university} - Min: ${result.min_h_index} - Max: ${result.max_h_index}`

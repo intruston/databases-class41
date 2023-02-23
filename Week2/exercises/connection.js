@@ -12,9 +12,19 @@ const startConnection = () => config.connect((err) => {
     console.log("Connected to the database");
   });
 
+const doQuery = (sql, par, message) => config.query(sql, par, function (error, results) {
+    if (error) throw error;
+    console.log(message);
+  });
+
+const selectQuery = (sql, callback) => config.query(sql, (error, results, fields) => {
+  if (error) throw error;
+  callback(results);
+});
+
 const endConnection = () => config.end((err) => {
     if (err) throw err;
     console.log("Connection closed");
   });
 
-module.exports = {config, startConnection, endConnection};
+module.exports = {startConnection, doQuery, selectQuery, endConnection};
