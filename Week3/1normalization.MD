@@ -17,4 +17,4 @@ Let's split data on 3 tables:
 to make relations between tables we could use these one:
 *orders* (order_id PK, member_id, dinner_id);
 *locations* (id PK, dinner_id, venue_code);
-*goods* (id PK, dinner_id, food_code);
+*goods* (id PK, order_id, food_code);
